@@ -1,0 +1,21 @@
+{
+    "name": "ardent-africa/sdk",
+    "description": "Typed, read-only PHP client for the Ardent Africa public API (/public/v1).",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["ardent", "ardent-africa", "api", "sdk", "fundraising", "petitions", "ghana"],
+    "homepage": "https://docs.ardent.africa/docs/developers/sdks",
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ardent\\Sdk\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "php tests/client_test.php"
+    }
+}
