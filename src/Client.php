@@ -19,7 +19,7 @@ class Client
 {
     private string $baseUrl;
     private ?string $apiKey;
-    /** @var callable|null fn(string $url, array $headers): array{0:int,1:string} — for tests */
+    /** @var callable|null fn(string $url, array $headers): array{0:int,1:string} for tests */
     private $transport;
 
     /**
@@ -128,6 +128,29 @@ class Client
     public function getEvent(string $slug): array
     {
         return $this->request('/events/' . rawurlencode($slug));
+    }
+
+    // -------------------------------------------------------------------- jobs
+    public function listJobs(array $params = []): array
+    {
+        return $this->request('/jobs', $params);
+    }
+
+    public function getJob(string $slug): array
+    {
+        return $this->request('/jobs/' . rawurlencode($slug));
+    }
+
+    // ----------------------------------------------------------------- reviews
+    // Public reviewable entities and their TrustScore. Never exposes reviewer identity.
+    public function listReviewEntities(array $params = []): array
+    {
+        return $this->request('/reviews/entities', $params);
+    }
+
+    public function getReviewEntity(string $slug): array
+    {
+        return $this->request('/reviews/entities/' . rawurlencode($slug));
     }
 
     // -------------------------------------------------------------- marketplace

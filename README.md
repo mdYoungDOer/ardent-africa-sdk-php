@@ -1,6 +1,6 @@
 # ardent-africa/sdk (PHP)
 
-A tiny, **read-only** PHP client for the [Ardent Africa public API](https://docs.ardent.africa/docs/developers) (`/public/v1`). Campaigns, petitions, events, marketplace listings, blog posts, public profiles, and platform stats. No write access, no PII. Depends only on `ext-curl` and `ext-json` — no third-party packages.
+A tiny, **read-only** PHP client for the [Ardent Africa public API](https://docs.ardent.africa/docs/developers) (`/public/v1`). Campaigns, petitions, events, jobs, review entities and TrustScore, marketplace listings, blog posts, public profiles, and platform stats. No write access, no PII. Depends only on `ext-curl` and `ext-json`, no third-party packages.
 
 ## Install
 
@@ -37,8 +37,8 @@ Methods return the decoded JSON as associative arrays. List endpoints return
 ### Methods
 
 `listCampaigns` · `getCampaign` · `listPetitions` · `getPetition` · `listEvents` · `getEvent` ·
-`listServices` · `getService` · `listCategories` · `listBlog` · `getBlogPost` · `getProfile` ·
-`getStats`.
+`listJobs` · `getJob` · `listReviewEntities` · `getReviewEntity` · `listServices` · `getService` ·
+`listCategories` · `listBlog` · `getBlogPost` · `getProfile` · `getStats`.
 
 ### Errors
 
